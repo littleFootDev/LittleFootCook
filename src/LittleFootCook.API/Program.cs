@@ -1,10 +1,12 @@
-using LittleFootCook.Infrastructure.Persistence;
+using LittleFootCook.Application;
+using LittleFootCook.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<LittleFootCookDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("LittleFootCookConnectionString")));
+
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplication();
 
 builder.Services.AddOpenApi();
 
