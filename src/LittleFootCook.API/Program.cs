@@ -1,3 +1,4 @@
+using LittleFootCook.API.Endpoints;
 using LittleFootCook.Application;
 using LittleFootCook.Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
+app.MapRecipeEndpoints();
 app.Run();
 
