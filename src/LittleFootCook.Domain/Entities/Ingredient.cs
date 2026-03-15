@@ -7,6 +7,7 @@ namespace LittleFootCook.Domain.Entities
 {
     public class Ingredient : Entity
     {
+        private Ingredient() { }
         public string Name { get;}
         public Quantity Quantity { get; }
 

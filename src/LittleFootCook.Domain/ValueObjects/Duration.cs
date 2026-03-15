@@ -8,6 +8,7 @@ namespace LittleFootCook.Domain.ValueObjects
 {
     public class Duration
     {
+        private Duration() { }
         public int Value { get; }
         public TimeUnit TimeUnit { get; }
 
