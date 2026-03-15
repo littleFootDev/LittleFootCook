@@ -17,6 +17,7 @@ namespace LittleFootCook.Infrastructure
                 options.UseNpgsql(configuration.GetConnectionString("LittleFootCookConnectionString")));
 
             services.AddScoped<IRecipeRepository, RecipeRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             return services;
         }

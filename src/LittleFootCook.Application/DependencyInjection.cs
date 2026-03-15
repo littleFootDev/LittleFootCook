@@ -13,6 +13,7 @@ namespace LittleFootCook.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<IRecipeService, RecipeService>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
             return services;
         }
