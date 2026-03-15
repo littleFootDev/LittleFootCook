@@ -6,6 +6,7 @@ namespace LittleFootCook.Domain.Entities
 {
     public class Category : Entity
     {
+        private Category() { }
         public string Name { get;}
 
         public Category(string name)

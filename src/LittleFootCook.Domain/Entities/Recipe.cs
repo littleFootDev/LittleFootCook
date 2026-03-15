@@ -10,9 +10,8 @@ namespace LittleFootCook.Domain.Entities
 {
     public class Recipe : Entity
     {
+        private Recipe() { }
         private List<Ingredient> _ingredients = new();
-
-        
 
         public IReadOnlyList<Ingredient> Ingredients => _ingredients;
         public string Title { get; private set; }

@@ -7,6 +7,7 @@ namespace LittleFootCook.Domain.ValueObjects
 {
     public class Quantity
     {
+        private Quantity() { }
         public decimal Value { get;}
         public MeasureUnit MeasureUnit { get;}
 
