@@ -11,8 +11,8 @@ namespace LittleFootCook.API.Endpoints
 
             group.MapGet("/", GetAllRecipes);
             group.MapGet("/{id:guid}", GetRecipeById);
-            group.MapPost("/", CreateRecipe);
-            group.MapDelete("/{id:guid}", DeleteRecipe);
+            group.MapPost("/", CreateRecipe).RequireAuthorization();
+            group.MapDelete("/{id:guid}", DeleteRecipe).RequireAuthorization();
         }
 
         private static async Task<IResult> GetAllRecipes(IRecipeService service)

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using LittleFootCook.Domain.Entities;
+using LittleFootCook.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace LittleFootCook.Infrastructure.Persistence
 {
-    public class LittleFootCookDbContext : DbContext
+    public class LittleFootCookDbContext : IdentityDbContext<AppUser, IdentityRole<Guid>, Guid>
     {
         public LittleFootCookDbContext(DbContextOptions<LittleFootCookDbContext> options) : base(options) { }
 

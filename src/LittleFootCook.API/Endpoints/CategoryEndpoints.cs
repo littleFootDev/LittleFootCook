@@ -10,8 +10,8 @@ namespace LittleFootCook.API.Endpoints
             var group = app.MapGroup("/api/categories");
 
             group.MapGet("/", GetAllCategories);
-            group.MapPost("/", CreateCategory);
-            group.MapDelete("/{id:guid}", DeleteCategory);
+            group.MapPost("/", CreateCategory).RequireAuthorization();
+            group.MapDelete("/{id:guid}", DeleteCategory).RequireAuthorization();
         }
 
         private static async Task<IResult> GetAllCategories(ICategoryService service)
